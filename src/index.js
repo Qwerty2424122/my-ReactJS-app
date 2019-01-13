@@ -11,7 +11,7 @@ class Hello extends React.Component{
 class World extends React.Component{
     render(){
         return(
-            <h1>orld </h1>
+            <h1>world </h1>
         )
     }
 }
