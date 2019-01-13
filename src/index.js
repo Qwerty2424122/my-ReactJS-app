@@ -1,33 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-class Hello extends React.Component{
-    render(){
-        return(
-            <h1>Hello</h1>
-        )
-    }
-}
-
-class World extends React.Component{
-    render(){
-        return(
-            <h1>world </h1>
-        )
-    }
-}
-
+import './index.css'
 class HelloWorld extends React.Component{
     render(){
         return(
-            <section>
-                <Hello></Hello>
-                <World></World>
+            <div>
+            <h1>Hello</h1>
+            <input type="text"></input>
+            <section className="foo" >
+                Hello I am Bhaart
             </section>
+
+            </div>
+
+            
         )
     }
-
-
 }
-
 
 ReactDOM.render(<HelloWorld/>, document.getElementById('root'))
