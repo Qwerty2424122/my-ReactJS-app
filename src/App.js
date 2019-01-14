@@ -1,23 +1,31 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Titles from "./Component/Titles";
+import Form from "./Component/Form";
+import Weather from "./Component/Weather";
 
 
-function sayhello(){
-    return <h1>Helloss</h1>
-}
+const API_KEY = 'f24119190d08363e415dd6375c6d4c27';
+class App extends React.Component{
 
+  getweather = async () => {
+      const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=Manchester,UK&appid=${API_KEY}&units=metric`);
+      const data = await api_call.json();
+      console.log(data);
 
-class App extends Component {
-  render() {
-    return (
-    
-      <div>
-        <sayhello>hELjssss</sayhello>
-
-      </div>
-    );
   }
-}
+    render(){
+      return(
+      <div>
+        <Titles></Titles>
+        <Form></Form>
+        <Weather></Weather>
+      </div>
+
+      );
+
+
+    }
+
+};
 
 export default App;
